@@ -1,0 +1,38 @@
+﻿@using MovieList
+@using MovieList.Models
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model Movie
+
+@{
+
+ ViewData["Title"] = "Delete Movie";
+}
+
+<h2>Confirm Deletion</h2>
+<h3>@Model.Name (@Model.Year)</h3>
+
+<form asp-action="Delete" method="post">
+ 
+
+    
+
+     <input  type="hidden" asp-for="MovieId" />
+    <br /> <br />
+    <button type="submit" class="btn btn-primary">Delete </button>
+    <br /> <br />
+     <a asp-controller="Home" asp-action="Index" class="btn btn-primary">Cancel</a>
+
+   </form>
+
+
+
+
+
+
+
+
+
+
+
+
